@@ -1,0 +1,39 @@
+/* Research Atlas V4 — an editorial page for a personal photography collection. */
+/* Source photos must retain their intended colors. The homepage caption has its own gradient. */
+.photo-tile>img{filter:none}
+.navlinks a{white-space:nowrap}
+.beyond-hero{padding-bottom:75px}
+.beyond-hero h1{letter-spacing:-3.5px}
+.beyond-hero p{max-width:690px}
+.photo-page{padding-top:66px}
+.photo-intro{display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;align-items:end;margin-bottom:36px}
+.photo-intro h2{font-family:Georgia,serif;font-size:clamp(35px,3.6vw,52px);font-weight:400;letter-spacing:-1.5px;line-height:1.13;margin:12px 0 0}
+.photo-intro p{margin:0;max-width:465px;font-size:17px;color:#5B7A80;line-height:1.72}
+.gallery-draft-note{background:#E0F0F1;color:#426C75;padding:15px 19px;margin-bottom:28px;font-size:14px;line-height:1.65;border-left:3px solid #59CDCD}
+.gallery-draft-note strong{color:#205662}
+.photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px 18px;align-items:start}
+.photo-entry{min-width:0;margin:0}
+.photo-entry.wide{grid-column:span 2}
+.photo-slot{aspect-ratio:1.28;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 74% 20%,#61CACA35,transparent 46%),linear-gradient(142deg,#1F5564,#173847 50%,#0E2835);
+  border:1px solid #3B6F7E;isolation:isolate}
+.photo-entry.wide .photo-slot{aspect-ratio:1.83}
+.photo-entry.portrait .photo-slot{aspect-ratio:0.82}
+.photo-entry:nth-child(2) .photo-slot{background:radial-gradient(circle at 16% 22%,#7AD2D338,transparent 47%),linear-gradient(145deg,#29516B,#1B3746)}
+.photo-entry:nth-child(3) .photo-slot{background:radial-gradient(circle at 75% 52%,#51D4CD33,transparent 56%),linear-gradient(160deg,#284C58,#0E2E43)}
+.photo-entry:nth-child(4) .photo-slot{background:radial-gradient(circle at 20% 75%,#8BD2D042,transparent 40%),linear-gradient(150deg,#124858,#283C50)}
+.photo-entry:nth-child(5) .photo-slot{background:radial-gradient(circle at 60% 20%,#7DD3D04B,transparent 45%),linear-gradient(160deg,#153A58,#21515D)}
+.photo-entry:nth-child(6) .photo-slot{background:radial-gradient(circle at 64% 62%,#B3E3DC35,transparent 46%),linear-gradient(130deg,#1D4A5A,#10303D)}
+.slot-seq{position:absolute;left:19px;top:18px;color:#D2F2F0;font-size:11px;letter-spacing:1.3px;font-weight:800}
+.slot-mark{font-size:clamp(70px,9vw,128px);font-weight:400;color:#6AD5D02E;line-height:1}
+.slot-status{position:absolute;left:19px;bottom:18px;font-size:11px;letter-spacing:1px;font-weight:800;color:#B9DEDD}
+.photo-entry figcaption{display:flex;justify-content:space-between;gap:10px;align-items:baseline;margin-top:11px}
+.photo-entry figcaption strong{font-size:17px;font-weight:700;color:#1D4957}
+.photo-entry figcaption span{font-size:12px;color:#64858C}
+.photo-outro{border-top:1px solid #CADFE1;padding-top:24px;display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:55px}
+.photo-outro p{font-size:14px!important;max-width:600px;margin:0}
+.photo-outro a{color:#077B85;font-size:14px;font-weight:800;white-space:nowrap}
+@media(max-width:1200px){.site-nav .navlinks{gap:11px;font-size:12px}}
+@media(max-width:1040px){.site-nav{flex-wrap:wrap;height:auto;padding-top:14px;padding-bottom:14px}.site-nav .navlinks{flex-wrap:wrap;width:100%;gap:19px}}
+@media(max-width:850px){.photo-intro{grid-template-columns:1fr;gap:15px}.photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.photo-entry.wide{grid-column:span 2}.photo-entry.portrait .photo-slot{aspect-ratio:1.15}}
+@media(max-width:640px){.site-nav .navlinks{flex-wrap:nowrap;overflow-x:auto;white-space:nowrap}.photo-grid{grid-template-columns:1fr;gap:27px}.photo-entry.wide{grid-column:span 1}.photo-entry.wide .photo-slot{aspect-ratio:1.37}.photo-entry.portrait .photo-slot{aspect-ratio:1.37}.photo-entry figcaption{flex-wrap:wrap}.photo-outro{flex-direction:column;align-items:flex-start}.gallery-draft-note{font-size:13px}}

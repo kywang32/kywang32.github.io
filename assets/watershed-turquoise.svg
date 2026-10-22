@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="680" viewBox="0 0 800 680">
+<rect width="800" height="680" fill="#DDEDEE"/>
+<defs><pattern id="grid" width="52" height="52" patternUnits="userSpaceOnUse"><path d="M 52 0 L 0 0 0 52" fill="none" stroke="#639DA3" stroke-width="0.6" opacity=".6"/></pattern><linearGradient id="river" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#3ABBC0"/><stop offset="1" stop-color="#087D8A"/></linearGradient></defs>
+<rect width="800" height="680" fill="url(#grid)"/>
+<g fill="none" stroke="#4A8E96" stroke-width="2" opacity=".4">
+<path d="M-100 90 C150 -40,290 45,390 115S650 165,900 25"/><path d="M-120 140 C160 0,310 99,409 165S673 216,914 75"/><path d="M-130 205 C140 49,305 160,405 235S650 288,916 143"/><path d="M-135 282 C160 127,310 229,405 305S665 353,910 208"/><path d="M-140 365 C158 203,307 305,418 375S666 437,914 286"/><path d="M-160 451 C125 277,328 390,437 445S667 501,930 362"/><path d="M-140 536 C140 360,332 477,430 535S700 583,924 445"/><path d="M-140 614 C150 460,320 538,427 602S672 658,912 510"/>
+</g><g fill="none" stroke="#7A9EA6" stroke-width="1" opacity=".38">
+<path d="M40 0 C115 90,114 168,73 230S8 372,100 430S160 610,130 700"/><path d="M105 -20 C175 99,164 172,130 241S81 367,160 430S225 606,186 700"/><path d="M163 -25 C235 94,220 194,189 255S135 365,210 434S286 599,248 700"/><path d="M575 -25 C545 80,550 148,615 228S702 410,628 490S584 622,640 700"/><path d="M630 -25 C592 85,605 160,665 228S761 392,695 491S662 612,706 700"/>
+</g><path d="M440 -70 C425 75,515 147,492 229 C474 293,353 335,375 406 C401 482,551 486,496 560 C463 610,476 665,525 750" fill="none" stroke="#B2CED0" stroke-width="58" opacity=".66"/><path d="M440 -70 C425 75,515 147,492 229 C474 293,353 335,375 406 C401 482,551 486,496 560 C463 610,476 665,525 750" fill="none" stroke="url(#river)" stroke-width="13" stroke-linecap="round"/>
+<path d="M173 98 Q240 186 319 247 T482 249 M675 202 Q601 257 513 288 M125 422 Q204 407 376 407 M663 532 Q584 501 492 555" fill="none" stroke="#4ABFC0" stroke-width="5" stroke-linecap="round"/>
+<g fill="#0C4759" stroke="#E8FAF8" stroke-width="4"><circle cx="483" cy="227" r="9"/><circle cx="376" cy="404" r="9"/><circle cx="497" cy="558" r="9"/></g>
+<g font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2"><text x="38" y="58" fill="#195867">WATERSHED / SCHEMATIC</text><text x="38" y="624" fill="#337C86">OBSERVATION ↔ MODELING</text></g><g fill="none" stroke="#337C86" stroke-width="2"><path d="M40 640 H260"/><path d="M40 652 H180"/></g></svg>

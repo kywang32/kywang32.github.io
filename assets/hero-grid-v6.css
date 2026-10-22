@@ -1,0 +1,30 @@
+/* V6: desktop hero proportions and baseline alignment. */
+@media (min-width:1081px) {
+  .hero {
+    grid-template-columns:minmax(0, 40fr) minmax(0, 60fr);
+    align-items:stretch;
+    column-gap:14px;
+  }
+  .hero-left {min-width:0; height:auto;}
+  .hero-board {
+    height:auto;
+    min-height:0;
+    align-self:stretch;
+    grid-template-columns:minmax(0,59fr) minmax(0,41fr);
+    grid-template-rows:minmax(0,60fr) minmax(0,40fr);
+    gap:10px;
+  }
+  .hero-board > * {min-height:0; min-width:0;}
+  .hero-board .photo-tile {height:100%;}
+  .hero-board .photo-tile > img {width:100%;height:100%;object-fit:cover;object-position:50% 100%;}
+  .hero-board .map-tile > img {width:100%;height:100%;object-fit:cover;}
+  .left-inner h1{font-size:clamp(54px,4.85vw,73px);letter-spacing:-3.5px;}
+  .left-inner p{max-width:460px;}
+  .left-bottom {gap:9px;}
+}
+@media (min-width:1081px) and (max-width:1260px) {
+  .left-inner h1{font-size:clamp(50px,4.7vw,65px);}
+  .hero-left{padding-inline:24px;}
+  .left-inner p{font-size:16px;}
+  .actions{gap:13px;}
+}

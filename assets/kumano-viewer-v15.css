@@ -1,0 +1,82 @@
+/* V15: modal lightbox. Never participate in the page document flow. */
+.viewer,
+.viewer * { box-sizing:border-box; }
+.viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 16px;
+  background: rgba(7, 11, 12, .975);
+  color: #e9e7df;
+  overflow: hidden;
+  isolation: isolate;
+}
+.viewer.open { display: flex; }
+.viewer[hidden] { display: none !important; }
+.viewer .viewer-image-button {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:0;
+  border:0;
+  background:transparent;
+  color:inherit;
+  cursor:zoom-out;
+  width:auto;
+  max-width:calc(100vw - 146px);
+  max-height:calc(100vh - 125px);
+  max-height:calc(100dvh - 125px);
+  min-width:0;
+  min-height:0;
+}
+.viewer .viewer-image-button img {
+  display:block;
+  width:auto;
+  height:auto;
+  max-width:calc(100vw - 146px);
+  max-height:calc(100vh - 125px);
+  max-height:calc(100dvh - 125px);
+  object-fit:contain;
+  box-shadow:0 18px 70px rgba(0,0,0,.5);
+  cursor:zoom-out;
+}
+.viewer .viewer-foot {color:#baada0;font-size:12px;letter-spacing:.045em;text-align:center;line-height:1.6;flex:0 0 auto;}
+.viewer .viewer-foot span {color:#f0eae0;}
+.viewer .viewer-controls {position:absolute;inset:0;pointer-events:none;}
+.viewer .viewer-controls button {
+  position:absolute;
+  pointer-events:auto;
+  display:grid;
+  place-items:center;
+  background:rgba(19,24,24,.8);
+  border:1px solid rgba(220,210,190,.3);
+  color:#eee7da;
+  border-radius:50%;
+  cursor:pointer;
+  transition:background .2s, border-color .2s;
+}
+.viewer .viewer-controls button:hover {background:#393c39;border-color:#d0b799;}
+.viewer .viewer-controls button:focus-visible,
+.viewer .viewer-image-button:focus-visible {outline:2px solid #d0ac8b;outline-offset:4px;}
+.viewer .close {right:20px;top:20px;width:43px;height:43px;font-size:27px;line-height:1;}
+.viewer .prev,.viewer .next {top:50%;transform:translateY(-50%);width:45px;height:52px;font-size:29px;line-height:1;}
+.viewer .prev {left:22px;}
+.viewer .next {right:22px;}
+@media(max-width:760px) {
+ .viewer {padding:12px 10px 44px;gap:9px;}
+ .viewer .viewer-image-button,.viewer .viewer-image-button img {
+   max-width:calc(100vw - 20px);
+   max-height:calc(100vh - 135px);
+   max-height:calc(100dvh - 135px);
+ }
+ .viewer .close{right:10px;top:9px;width:37px;height:37px;}
+ .viewer .prev,.viewer .next{top:auto;bottom:9px;transform:none;width:43px;height:36px;}
+ .viewer .prev{left:18px;}.viewer .next{right:18px;}
+ .viewer .viewer-foot{font-size:11px;}
+}
+@media(prefers-reduced-motion:reduce) { .viewer * {transition:none!important;} }

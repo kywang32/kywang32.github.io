@@ -1,0 +1,11 @@
+/* V12 - narrative photo album, respect original compositions. */
+.album-photo .album-image, .album-photo.portrait .album-image {
+  aspect-ratio:auto; max-height:none; width:100%; height:auto; object-fit:contain;
+  background:transparent; display:block;
+}
+.album-photo .album-photo-meta {padding-top:12px}
+.album-photos {align-items:start; column-gap:25px; row-gap:40px}
+.album-photos .album-photo:first-child {grid-column:1 / -1; width:min(100%, 720px); justify-self:center; margin-bottom:16px}
+.album-photos .album-photo:first-child .album-image {max-height:900px; object-fit:contain}
+.album-photo:focus-visible {outline:3px solid #58D3CF; outline-offset:5px}
+@media(max-width:700px){.album-photos .album-photo:first-child {grid-column:1; width:100%}}

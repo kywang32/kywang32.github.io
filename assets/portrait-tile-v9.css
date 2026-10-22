@@ -1,0 +1,36 @@
+/* V8: photographic identity tile. Circular avatar is CSS-masked, with unaltered photo colors. */
+.hero-board .portrait-tile{min-width:0;min-height:0;overflow:hidden;position:relative;
+  display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:4px;
+  padding:14px 17px 15px;background:linear-gradient(145deg,#205768 0%,#174657 51%,#0D3546 100%);
+  color:#F3FAF9;isolation:isolate;transition:background-color .2s ease}
+.hero-board .portrait-tile::after{content:'';position:absolute;width:240px;height:240px;right:-110px;top:-90px;
+  border:1px solid #7ADAD338;border-radius:50%;pointer-events:none;z-index:-1}
+.hero-board .portrait-kicker{align-self:stretch;color:#B8E4E1;font-size:10px;font-weight:750;letter-spacing:.9px;line-height:1.3}
+.hero-board .portrait-avatar{display:block;aspect-ratio:1/1;width:clamp(98px,10vw,150px);height:clamp(98px,10vw,150px);max-height:none;flex:0 0 auto;
+  border-radius:50%;overflow:hidden;box-shadow:0 0 0 2px #7DE4DF,0 0 0 7px #A5EFF21A,0 10px 22px #081D2860;
+  transition:transform .25s ease,box-shadow .25s ease}
+.hero-board .portrait-avatar img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;filter:none}
+.hero-board .portrait-footer{width:100%;display:flex;justify-content:space-between;align-items:end;gap:7px;line-height:1.2}
+.hero-board .portrait-label{min-width:0;display:block}
+.hero-board .portrait-label strong{display:block;color:#F6FAF9;font-size:18px;line-height:1.25;font-weight:700;letter-spacing:-.25px}
+.hero-board .portrait-label small{display:block;color:#A7D4D4;font-size:9px;font-weight:750;letter-spacing:.85px;margin-top:5px}
+.hero-board .portrait-footer b{display:block;flex-shrink:0;font-size:24px;font-weight:400;color:#76E1D9;line-height:1}
+.hero-board .portrait-tile:hover .portrait-avatar{transform:scale(1.045);box-shadow:0 0 0 2px #B1F7F1,0 0 0 8px #A5EFF22A,0 14px 28px #081D2870}
+.hero-board .portrait-tile:hover .portrait-footer b{color:#C5FFF8}
+.hero-board .portrait-tile:focus-visible{outline:3px solid #7DE4DF;outline-offset:-3px}
+@media(max-width:1080px){.hero-board .portrait-avatar{width:94px;height:94px} }
+@media(max-width:540px){
+  .hero-board .portrait-tile{padding:10px 9px;gap:4px}
+  .hero-board .portrait-kicker{font-size:8px;letter-spacing:.3px}
+  .hero-board .portrait-avatar{width:86px;height:86px}
+  .hero-board .portrait-label strong{font-size:13px;letter-spacing:0}
+  .hero-board .portrait-label small{font-size:8px;letter-spacing:.15px;margin-top:3px}
+  .hero-board .portrait-footer b{font-size:17px}
+}
+@media(max-width:380px){.hero-board .portrait-tile{padding-inline:7px}.hero-board .portrait-label strong{font-size:12px}.hero-board .portrait-avatar{width:78px;height:78px}}
+@media(prefers-reduced-motion:reduce){.hero-board .portrait-avatar{transition:none}}
+
+/* V9: full-length photographic portrait inside the original circular frame. */
+@media (min-width:1081px){.hero-board .portrait-avatar{width:178px;height:178px}}
+@media (min-width:541px) and (max-width:1080px){.hero-board .portrait-avatar{width:108px;height:108px}}
+@media (min-width:381px) and (max-width:540px){.hero-board .portrait-avatar{width:97px;height:97px}}

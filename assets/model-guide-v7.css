@@ -1,0 +1,16 @@
+/* V7: replace illustrative watershed in the top-right hero with a published model-selection figure. */
+.model-guide-tile{background:#F3F7F7;margin:0;isolation:isolate;overflow:hidden;position:relative;}
+.model-guide-link{position:relative;display:flex;flex-direction:column;width:100%;height:100%;overflow:hidden;align-items:stretch;justify-content:space-between;cursor:pointer;}
+.model-guide-link>img{width:100%;height:calc(100% - 56px);min-height:0;flex:1;object-fit:contain;object-position:center center;display:block;background:#fff;filter:none;transition:transform .22s ease;}
+.model-guide-link:hover>img{transform:scale(1.024)}
+.model-guide-caption{position:relative;width:100%;min-height:56px;display:flex;justify-content:space-between;align-items:center;gap:8px;background:#D2EFF0F5;padding:13px 14px;color:#154654;letter-spacing:.65px;text-align:left;line-height:1.3;}
+.model-guide-caption strong{display:block;font-size:11px;letter-spacing:.6px;font-weight:800;}
+.model-guide-caption small{display:block;font-size:9px;margin-top:4px;color:#427580;font-weight:650;}
+.model-guide-caption b{font-size:20px;line-height:1;font-weight:400;}
+.model-guide-zoom{position:absolute;top:12px;right:12px;display:flex;width:34px;height:34px;justify-content:center;align-items:center;background:#12303CBD;color:#fff;backdrop-filter:blur(4px);border:1px solid #FFFFFF45;border-radius:4px;font-size:21px;z-index:2;}
+.model-guide-zoom:hover{background:#168C95;color:#fff;}
+.model-guide-link:focus-visible,.model-guide-zoom:focus-visible{outline:3px solid #58D3CF;outline-offset:-3px;}
+footer>.figure-credit{display:block;width:min(1320px, calc(100% - 60px));margin:7px auto 0;padding-top:8px;border-top:1px solid #85A3A522;font-size:10px;font-weight:400;letter-spacing:.1px;color:#93B8BB;}
+footer>.figure-credit a{color:#A6DEDF;text-decoration:underline;text-underline-offset:2px;}
+@media(max-width:1080px){.model-guide-caption strong{font-size:10px}.model-guide-zoom{top:8px;right:8px}}
+@media(max-width:540px){.model-guide-caption{padding:8px 7px;gap:2px;min-height:48px}.model-guide-caption strong{font-size:8px;letter-spacing:0}.model-guide-caption small{font-size:7px}.model-guide-caption b{font-size:13px}.model-guide-zoom{top:5px;right:5px;height:24px;width:24px;font-size:16px}footer>.figure-credit{width:calc(100% - 28px);}}

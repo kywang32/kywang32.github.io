@@ -1,0 +1,15 @@
+/* V5 - original photograph in the hero layout. Avoid image color filters. */
+.hero-board .photo-tile { display:block; position:relative; cursor:pointer; }
+.hero-board .photo-tile > img { object-position: 50% 100%; filter:none; }
+.hero-board .photo-tile .image-top { text-shadow:0 1px 9px #001820B8; font-size:11px; letter-spacing:1.1px; }
+.hero-board .photo-tile .image-top span { font-size:18px; font-weight:500; line-height:1; }
+.hero-board .photo-tile:hover .image-top { color:#80E1D9; }
+.hero-board .photo-tile:focus-visible { outline:3px solid #80E1D9; outline-offset:2px; }
+@media(max-width:540px){.hero-board .photo-tile > img{object-position:50% 100%}.hero-board .photo-tile .image-top{left:11px;right:10px;font-size:9px;letter-spacing:.65px}}
+
+/* First original photo in Beyond Research, replacing the corresponding placeholder. */
+#forest-steps { scroll-margin-top:32px; }
+#forest-steps .photo-slot {background:#0d2530;}
+#forest-steps .photo-slot > a {display:block;width:100%;height:100%;}
+#forest-steps .photo-slot img {object-fit:cover;object-position:50% 100%;width:100%;height:100%;}
+#forest-steps .photo-slot a:focus-visible {outline:3px solid #59CDCD;outline-offset:-4px;}

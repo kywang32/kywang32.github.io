@@ -1,0 +1,35 @@
+/* Hybrid 2 refinement · flush chapter baselines, image ratios never cropped. */
+.baseline-wall {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+  width: 100%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(217,198,176,.24);
+  min-height: 120px;
+}
+.baseline-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 18px;
+  min-width: 0;
+  flex-shrink: 0;
+}
+.baseline-column .photo { width: 100%; overflow: hidden; }
+.baseline-column .photo img { display: block; width: 100%; height: auto; object-fit: contain; }
+.baseline-column .photo .photocap { font-size: 11px; }
+/* Editorial rhythm: no dark fill blocks; the photograph itself defines the tile. */
+.chap:has(.baseline-wall) { padding-bottom: 60px; }
+.chap:has(.baseline-wall) .chap-head { margin-bottom: 30px; }
+@media(max-width:900px) {
+ .baseline-wall, .baseline-column { gap: 13px; }
+}
+@media(max-width:600px) {
+ .baseline-wall { display:block; border:0; padding:0; }
+ .baseline-column { width:100%!important; gap:14px; }
+ .baseline-column .photo { margin:0 0 14px; }
+ .chap:has(.baseline-wall) { padding-bottom:35px; }
+}
+/* Keep every edge of the photograph visible even during hover. */
+.baseline-column .photo:hover img { transform: none; filter: brightness(1.08); }

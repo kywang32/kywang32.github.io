@@ -1,0 +1,59 @@
+/* Beyond Research: album index, editorial collections, responsive gallery + lightbox. */
+.album-index-page{padding-top:65px}
+.album-index-intro{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:end;margin-bottom:35px}
+.album-index-intro h2{font:400 clamp(34px,3.5vw,52px)/1.14 Georgia,serif;letter-spacing:-1.6px;margin:12px 0 0;color:#173947}
+.album-index-intro p{max-width:490px;font-size:17px;line-height:1.75;color:#5C7A80;margin-bottom:0}
+.album-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.album-list:has(.album-card:only-child){grid-template-columns:1fr}
+.album-card{display:grid;min-width:0;overflow:hidden;background:#fff;box-shadow:0 14px 35px #1B556110;border:1px solid #DDE9E9;transition:transform .24s ease,box-shadow .24s ease}
+.album-card:hover{transform:translateY(-3px);box-shadow:0 20px 40px #1B556126}
+.album-card:focus-visible,.album-photo:focus-visible{outline:3px solid #00A7AC;outline-offset:4px}
+.album-card-featured{grid-template-columns:55% 45%;min-height:455px}
+.album-cover{overflow:hidden;position:relative;aspect-ratio:1.2;background:#1C3A45}
+.album-card-featured .album-cover{aspect-ratio:1.3}
+.album-cover img{width:100%;height:100%;object-fit:cover;object-position:center 59%;filter:none;transition:transform .6s ease}
+.album-card:hover .album-cover img{transform:scale(1.025)}
+.album-cover:after{content:"";position:absolute;inset:0;border:10px solid transparent;pointer-events:none}
+.album-card-copy{padding:38px;display:flex;flex-direction:column;align-items:start;justify-content:center;gap:20px}
+.album-card-copy .album-kind{color:#368D96;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;font-weight:800}
+.album-card-copy h3{font:400 clamp(29px,3vw,44px)/1.12 Georgia,serif;letter-spacing:-1px;margin:0;color:#153E4A}
+.album-card-copy p{color:#5A777D;font-size:16px;line-height:1.8;max-width:390px;margin:0}
+.album-card-copy .album-count{display:block;font-size:12px;color:#66868B;font-weight:700;letter-spacing:.25px}
+.album-enter{margin-top:10px;color:#087F88;font-size:13px;font-weight:800;letter-spacing:.4px;border-bottom:1px solid #51C8C3;padding-bottom:8px}
+.album-note{margin:28px 0 0;color:#6E8B91;font-size:13px;line-height:1.6}
+.album-detail{padding-top:38px}
+.album-back{display:inline-flex;font-size:13px;align-items:center;gap:10px;color:#167F8B;font-weight:750;margin:0 0 32px}
+.album-detail-header{display:grid;grid-template-columns:1.1fr .9fr;align-items:end;gap:60px;margin-bottom:35px;border-bottom:1px solid #C6DADD;padding-bottom:30px}
+.album-detail-header h2{font:400 clamp(42px,5vw,72px)/1.08 Georgia,serif;letter-spacing:-1.7px;margin:10px 0 0;color:#163C48}
+.album-detail-header p{font-size:17px;color:#5A787E;max-width:500px;margin:0 0 3px}
+.album-detail-meta{font-size:11px;font-weight:800;color:#42909C;letter-spacing:1.4px}
+.album-photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:32px 24px}
+.album-photos:has(.album-photo:only-child){grid-template-columns:minmax(0, 960px);justify-content:center}
+.album-photo{appearance:none;display:block;width:100%;background:none;border:0;text-align:left;padding:0;cursor:zoom-in;color:inherit}
+.album-image{display:block;width:100%;height:auto;aspect-ratio:4/3;background:#E5EEEE;object-fit:contain}
+.album-photo.portrait .album-image{aspect-ratio:4/5}
+.album-photos:has(.album-photo:only-child) .album-image{aspect-ratio:auto;max-height:850px;object-fit:contain;background:#EAF0F0}
+.album-photo-meta{display:flex;gap:12px;justify-content:space-between;align-items:baseline;padding-top:11px}
+.album-photo-meta strong{font-size:15px;color:#274D56}
+.album-photo-meta small{font-size:12px;color:#6D888D}
+.album-footer-note{border-top:1px solid #C7DDDF;display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;padding-top:24px;margin-top:48px;font-size:13px;color:#708C90}
+.album-footer-note a{color:#0D7C87;font-weight:700}
+.album-not-found{font-size:17px;max-width:600px}
+/* Modal viewer */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(6,20,26,.965);z-index:250;color:#EAF8F8;flex-direction:column}
+.lightbox.is-open{display:flex}
+body.lightbox-open{overflow:hidden}
+.lightbox-head{height:62px;min-height:62px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:10px 24px;border-bottom:1px solid #ffffff25}
+.lightbox-head strong{font-size:14px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lightbox-head small{font-size:12px;color:#A7C1C4;white-space:nowrap}
+.lightbox-close{font-size:26px;border:none;background:transparent;color:#F4FFFF;cursor:pointer;padding:6px 10px;line-height:1}
+.lightbox-stage{flex:1;display:flex;align-items:center;justify-content:center;min-height:0;padding:12px 84px;position:relative}
+.lightbox-stage img{width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain}
+.lightbox-arrow{position:absolute;top:50%;transform:translateY(-50%);color:#DDF5F2;border:1px solid #FFFFFF33;background:#18384190;border-radius:50%;width:47px;height:47px;font-size:28px;cursor:pointer}
+.lightbox-prev{left:19px}.lightbox-next{right:19px}
+.lightbox-arrow[hidden]{display:none}
+.lightbox-foot{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 25px 18px;border-top:1px solid #ffffff25;font-size:13px;color:#C5DDDC}
+.lightbox-foot p{margin:0}.lightbox-foot span{white-space:nowrap;color:#9EBCBE}
+.lightbox button:focus-visible{outline:2px solid #64DFDA;outline-offset:2px}
+@media(max-width:900px){.album-card-featured{min-height:380px;grid-template-columns:1fr 1fr}.album-card-copy{padding:25px}.album-detail-header{gap:25px}}
+@media(max-width:700px){.album-index-intro,.album-detail-header{grid-template-columns:1fr;gap:15px}.album-list{grid-template-columns:1fr}.album-card-featured{display:block}.album-card-featured .album-cover{aspect-ratio:1.38}.album-card-copy{padding:25px 22px;gap:13px}.album-card-copy h3{font-size:33px}.album-photos{grid-template-columns:1fr}.album-photo.portrait .album-image{aspect-ratio:auto}.lightbox-stage{padding:8px 12px 8px}.lightbox-arrow{top:auto;bottom:10px;transform:none;background:#16353CBD;z-index:4;width:38px;height:38px}.lightbox-prev{left:15px}.lightbox-next{right:15px}.lightbox-foot{padding-bottom:53px}.lightbox-head{padding:10px 15px}.album-detail{padding-top:24px}}

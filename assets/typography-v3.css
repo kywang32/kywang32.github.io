@@ -1,0 +1,77 @@
+/* Academic Research Atlas V3: legible typography and stronger visual hierarchy.
+   Designed for desktop reading, tablets, and mobile, without changing the turquoise palette. */
+body {font-size:16px; line-height:1.65;}
+:focus-visible {outline:2px solid #28BEBF;outline-offset:3px;}
+.site-nav{min-height:96px}
+.site-nav .logo .logo-words{font-size:17px;line-height:1.2;letter-spacing:.1px;font-weight:800;opacity:1;margin-top:0}
+.site-nav .logo .logo-symbol{font-size:32px;line-height:1;opacity:1;margin-top:0;letter-spacing:0;font-weight:400}
+.logo-words small{font-size:10px;letter-spacing:0.75px;margin-top:7px}
+.navlinks{font-size:14px;gap:20px;line-height:1.4}
+.tiny-caps{font-size:12px;letter-spacing:1.45px}
+.hero .eyebrow,.hero .left-bottom{font-size:11px;letter-spacing:.8px}
+.left-inner .tiny-caps{font-size:12px;letter-spacing:1px}
+.left-inner p{font-size:17px;line-height:1.7;max-width:480px}
+.actions a{font-size:14px}
+.image-top,.image-caption span{font-size:11px}
+.image-caption strong{font-size:23px}
+.map-caption{font-size:10px}
+.top-mini{font-size:11px}
+.data-foot,.data-foot span:last-child{font-size:10px;letter-spacing:.5px}
+.focus-intro p,.interlude p,.work p,.resource-band>div>p,.portrait-note p{font-size:17px;line-height:1.75}
+.focus-card .tag,.resource-card .tag,.content-card .tag{font-size:12px;letter-spacing:.65px}
+.focus-card p,.resource-card p,.project-lines p{font-size:15px;line-height:1.65}
+.focus-card>span,.resource-card a{font-size:13px;letter-spacing:.4px}
+.focus-card h3{font-size:33px}
+.pills span{font-size:11px;letter-spacing:.6px}
+.interior-hero p{font-size:18px;line-height:1.65}
+.page-content p,.page-content .content-card p{font-size:16px;line-height:1.72}
+.page-content h3{font-size:23px}
+.source-banner{font-size:15px;line-height:1.7}
+.pub-year-group h2 small{font-size:14px}
+.year-jump a{font-size:14px}
+.publication-card{grid-template-columns:72px minmax(0,1fr) 110px;gap:20px;padding:26px 0}
+.pub-year{font-size:15px}
+.publication-card h3,.selected-section .publication-card h3{font-size:18px;line-height:1.48}
+.publication-card p,.selected-section .publication-card p{font-size:14px;line-height:1.6}
+.doi-link,.muted{font-size:13px;line-height:1.6}
+.first-author-badge{display:inline-flex;align-items:center;align-self:flex-start;
+   width:max-content;max-width:100%;margin:0 0 9px;padding:4px 10px;
+   font:700 11px/1.2 Arial,'Helvetica Neue',sans-serif;letter-spacing:.35px;
+   background:#D9F4F2;color:#126972;border:1px solid #9DDDD9;border-radius:2px}
+.selected-section .publication-card{grid-template-columns:56px minmax(0,1fr) 78px;gap:14px}
+.selected-list{padding:0 5px 0 0}
+.page-content .fine-print{font-size:13px!important}
+.meta-row,.cv-item time{font-size:14px!important}
+.cv-item h3{font-size:19px}
+.cv-item p{font-size:15px}
+.cv-item{grid-template-columns:145px minmax(0,1fr)}
+.mini-columns h3{font-size:24px}
+.link-list a{font-size:16px}
+.single-grant{grid-template-columns: minmax(0,1fr);max-width:1050px}
+.single-grant .content-card{padding:42px 46px}
+.single-grant h2{font-size:clamp(30px,3vw,45px)}
+.single-grant h3{font-size:26px;max-width:850px}
+.resource-card{min-height:245px}
+footer>.wrap{font-size:12px;letter-spacing:.4px}
+@media(max-width:1200px){.navlinks{gap:13px;font-size:13px}}
+@media(max-width:950px){.site-nav{align-items:flex-start;gap:12px}.navlinks{gap:16px}}
+@media(max-width:850px){.navlinks{font-size:13px}.page-content{padding-top:55px}}
+@media(max-width:640px){
+  .site-nav{min-height:0;gap:12px}
+  .navlinks{font-size:13px;gap:17px}
+  .site-nav .logo .logo-words{font-size:15px}
+  .site-nav .logo .logo-symbol{font-size:27px}
+  .logo-words small{font-size:9px}
+  .left-inner p{font-size:16px}
+  .focus-intro p,.interlude p,.work p,.resource-band>div>p{font-size:16px}
+  .focus-card p,.resource-card p{font-size:15px}
+  .publication-card,.selected-section .publication-card{grid-template-columns:1fr;gap:8px}
+  .publication-card h3,.selected-section .publication-card h3{font-size:17px}
+  .publication-card p{font-size:14px}
+  .cv-item{grid-template-columns:1fr;gap:7px}
+  .single-grant .content-card{padding:28px 24px}
+  .single-grant h3{font-size:23px}
+  .data-foot,.data-foot span:last-child{font-size:9px}
+  .map-caption{font-size:9px}
+  footer>.wrap{font-size:11px}
+}
