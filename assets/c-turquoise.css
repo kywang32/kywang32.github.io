@@ -9,3 +9,8 @@ body{background:#F1F5F5;font-family:Arial,'Helvetica Neue',sans-serif;color:#1E3
 .focus-card h3{color:#21434E}
 .pills span:hover{background:#C4E9E9}
 ::selection{background:#7DE4DF;color:#10232E}
+
+/* Homepage full-width alternate bands after publications/funding reorder. */
+.selected-publications-band{background:#E0F0F1}
+.selected-publications-band .publication-card{border-bottom-color:#BDD7D9}
+#projects.interlude{background:#F1F5F5}
