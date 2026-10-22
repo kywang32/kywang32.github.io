@@ -14,3 +14,21 @@ body{background:#F1F5F5;font-family:Arial,'Helvetica Neue',sans-serif;color:#1E3
 .selected-publications-band{background:#E0F0F1}
 .selected-publications-band .publication-card{border-bottom-color:#BDD7D9}
 #projects.interlude{background:#F1F5F5}
+
+/* Keep the funding block centered in its full-width alternating color band. */
+#projects.interlude > .interlude-grid {
+  width: min(1320px, calc(100% - 100px));
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(30px, 6vw, 90px);
+}
+@media (max-width: 850px) {
+  #projects.interlude > .interlude-grid {
+    width: min(660px, calc(100% - 36px));
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
